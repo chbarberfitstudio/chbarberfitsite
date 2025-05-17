@@ -196,11 +196,13 @@ input[type="date"].filled::placeholder {
 }
 #menu-productos .card {
   border: 1px solid #00f0ff;
-  border-radius: 15px;
+  border-radius: 20px;
   transition: transform 0.3s ease;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #menu-productos .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00f0ff;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #00f0ff;
 }
