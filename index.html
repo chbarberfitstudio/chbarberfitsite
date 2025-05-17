@@ -85,6 +85,40 @@
             height: auto;
             object-fit: cover;
         }
+        .info-section {
+            background-color: #1c1c1c;
+            padding: 60px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .info-column {
+            flex: 1 1 250px;
+            margin: 20px;
+        }
+        .info-column h3 {
+            color: orange;
+            margin-bottom: 10px;
+            border-bottom: 1px solid white;
+            display: inline-block;
+        }
+        .info-column table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+        .info-column table td, .info-column table th {
+            border: 1px solid white;
+            padding: 5px 10px;
+        }
+        .info-column iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -108,9 +142,36 @@
     <section class="gallery">
         <h2>Algunos de nuestros cortes...</h2>
         <div class="gallery-images">
-            <img src="assets/img/corte1.jpeg" alt="Corte 1">
-            <img src="assets/img/corte2.jpeg" alt="Corte 2">
-            <img src="assets/img/corte 3.jpeg" alt="Corte 3">
+            <img src="corte1.jpg" alt="Corte 1">
+            <img src="corte2.jpg" alt="Corte 2">
+            <img src="corte3.jpg" alt="Corte 3">
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-column">
+            <h3>Horario</h3>
+            <table>
+                <tr><th>Lunes</th><td>Cerrado</td></tr>
+                <tr><th>Martes</th><td>10:00–14:00, 16:00–20:30</td></tr>
+                <tr><th>Miércoles</th><td>10:00–14:00, 16:00–20:30</td></tr>
+                <tr><th>Jueves</th><td>10:00–14:00, 16:00–20:30</td></tr>
+                <tr><th>Viernes</th><td>10:00–14:00, 16:00–20:30</td></tr>
+                <tr><th>Sábado</th><td>10:00–14:00, 15:00–18:00</td></tr>
+                <tr><th>Domingo</th><td>Cerrado</td></tr>
+            </table>
+        </div>
+        <div class="info-column" id="ubicacion">
+            <h3>Localización</h3>
+            <iframe src="https://www.google.com/maps?q=C+Riviera+15317,+Mazatlán,+Sinaloa&output=embed"></iframe>
+            <p><strong>Dirección:</strong> Calle Riviera #15317 Fracc La Riviera</p>
+            <p><strong>Teléfono:</strong> 669 932 0089</p>
+            <p><strong>WhatsApp:</strong> 669 932 0089</p>
+        </div>
+        <div class="info-column" id="contacto">
+            <h3>Contacto</h3>
+            <p><strong>Email:</strong> chbarberfitstudio@gmail.com</p>
+            <p><strong>Dirección:</strong> Calle Riviera #15317 Fracc La Riviera</p>
         </div>
     </section>
 </body>
