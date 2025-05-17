@@ -22,15 +22,6 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #444;
-            gap: 40px;
-        }
-        header .logo {
-            flex-shrink: 0;
-        }
-        header nav {
-            flex: 1;
-            display: flex;
-            justify-content: center;
         }
         header nav a {
             color: #ddd;
@@ -39,10 +30,6 @@
         }
         header nav a:hover {
             color: white;
-        }
-        header .cta-container {
-            display: flex;
-            align-items: center;
         }
         header .cta-button {
             background-color: #ccc;
@@ -53,18 +40,18 @@
             border-radius: 4px;
         }
         .hero {
-            height: 100vh;
-            background-image: url('assets/img/fondo.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            padding-top: 100px;
-        }
+    height: 100vh;
+    background-image: url('assets/img/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+}
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -133,21 +120,101 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
+        .catalogo {
+    background-color: #111;
+    padding: 80px 40px;
+    text-align: center;
+}
+.catalogo h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+.catalogo-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.producto {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    color: white;
+}
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.producto h3 {
+    margin: 10px 0 5px;
+}
+.producto span {
+    display: block;
+    margin-top: 10px;
+    color: orange;
+    font-weight: bold;
+}
+.barbero-profile {
+    background-color: #1c1c1c;
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+.barbero-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.barbero-card {
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.barbero-card:hover {
+    transform: scale(1.02);
+}
+
+.barbero-card img {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+}
+
+.barbero-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.barbero-info h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="assets/img/logo.png" alt="CH Logo" style="height: 120px;">
+            <img src="assets/img/logo.png" alt="CH Logo" style="height: 60px;">
         </div>
         <nav>
             <a href="#contacto">Contacto</a>
             <a href="#ubicacion">¿Dónde estamos?</a>
-            <a href="#aparcamiento">¿Quién soy?</a>
+            <a href="#aparcamiento">¿Quien Soy?</a>
         </nav>
-        <div class="cta-container">
-            <button class="cta-button">Pedir cita</button>
-        </div>
+        <button class="cta-button">Pedir cita</button>
     </header>
 
     <section class="hero">
@@ -163,6 +230,44 @@
             <img src="assets/img/corte 3.jpeg" alt="Corte 3">
         </div>
     </section>
+      <section class="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="catalogo-items">
+            <div class="producto">
+                <img src="assets/img/cera1.jpg" alt="Cera fijadora">
+                <h3>Cera Fijadora</h3>
+                <p>Alta fijación, acabado mate. Ideal para estilos definidos y duraderos.</p>
+                <span>$150 MXN</span>
+            </div>
+            <div class="producto">
+                <img src="assets/img/cera2.jpg" alt="Pomada brillo">
+                <h3>Pomada con Brillo</h3>
+                <p>Para un look más clásico y elegante con acabado brillante.</p>
+                <span>$180 MXN</span>
+            </div>
+            <div class="producto">
+                <img src="assets/img/shampoo.jpg" alt="Shampoo especial">
+                <h3>Shampoo para Cabello</h3>
+                <p>Nutre y fortalece, perfecto para el uso diario.</p>
+                <span>$120 MXN</span>
+            </div>
+        </div>
+    </section>
+    <section class="barbero-profile" id="aparcamiento">
+  <h2>¿Quién Soy?</h2>
+  <div class="barbero-container">
+    <div class="barbero-card">
+      <img src="assets/img/quiensoy.jpeg" alt="Antonio" />
+      <div class="barbero-info">
+        <h3>Antonio</h3>
+        <p><strong>Edad:</strong> 27 años</p>
+        <p><strong>Experiencia:</strong> 6 años</p>
+        <p><strong>Especialidad:</strong> Cortes urbanos y fades de precisión</p>
+        <p><strong>Pasión:</strong> Dar confianza a través del estilo</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="info-section">
         <div class="info-column">
